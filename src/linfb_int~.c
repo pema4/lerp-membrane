@@ -7,8 +7,8 @@ static t_class *linfb_int_tilde_class = NULL;
 typedef struct _linfb_int_tilde {
   t_object x_obj;
   t_float x_f;
-  t_sample *buffer; // output ring buffer
-  int block_size;   // ring buffer length
+  t_sample *buffer; // output ring buffer (twice the size of a signal block)
+  int block_size;
 } t_linfb_int_tilde;
 
 void *linfb_int_tilde_new(void) {
