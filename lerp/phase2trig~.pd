@@ -1,0 +1,6 @@
+#N canvas 585 155 201 114 12;
+#X obj 19 20 inlet~ time;
+#X obj 19 44 fexpr~ $x[0] < $x[-1];
+#X obj 19 68 outlet~ trig;
+#X connect 0 0 1 0;
+#X connect 1 0 2 0;

@@ -53,7 +53,7 @@ t_int *linfb_tri_int_tilde_perform(t_int *w) {
     t_sample b_feedback = *(buffer - delay - 1) * mix;
     t_sample feedback = (a_feedback + b_feedback) * *fb_in++;
 
-    t_sample result = asin(sin(*fold_in++ * *phase_in++ + feedback));
+    t_sample result = sin(*fold_in++ * *phase_in++ + asin(feedback));
     *buffer++ = result;
     *out++ = result;
   }
